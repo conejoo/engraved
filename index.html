@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <style>
+      html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        overflow: hidden;
+      }
+      .sidebar-frame, .main-frame {
+        height: 100%;
+        display: inline-block;
+        border: none;
+      }
+      .sidebar-frame {
+        width: 200px;
+      }
+      .main-frame {
+        width: calc(100% - 205px);
+      }
+    </style>
+  </head>
+  <body>
+    <iframe src="/sidebar.html" class="sidebar-frame"></iframe>
+    <iframe src="/marco_central.html" name="marco_central" class="main-frame"></iframe>
+  </body>
+</html>
