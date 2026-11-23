@@ -1,27 +1,94 @@
-<html>
+<!doctype html>
+<html lang="es">
   <head>
+    <meta charset="utf-8">
+    <title>Engraved</title>
     <style>
       html, body {
-        width: 100%;
         height: 100%;
-        margin: 0px;
+        margin: 0;
         overflow: hidden;
       }
-      .sidebar-frame, .main-frame {
-        height: 100%;
-        display: inline-block;
-        border: none;
+
+      body {
+        display: grid;
+        grid-template-columns: 200px minmax(0, 1fr);
+        grid-template-rows: minmax(0, 1fr);
+        gap: 5px;
       }
-      .sidebar-frame {
-        width: 200px;
+
+      .sidebar {
+        background-image: url("index/bg_frame.jpg");
+        padding: 45px 0 0 8px;
+        overflow: auto;
       }
+
+      .sidebar-logo {
+        margin: 0 0 4px 16px;
+      }
+
+      .sidebar ul {
+        display: grid;
+        justify-items: center;
+        gap: 4px;
+        width: 163px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .sidebar a, .sidebar img {
+        display: block;
+      }
+
       .main-frame {
-        width: calc(100% - 205px);
+        width: 100%;
+        height: 100%;
+        border: 0;
       }
     </style>
   </head>
   <body>
-    <iframe src="/sidebar.html" class="sidebar-frame"></iframe>
-    <iframe src="/marco_central.html" name="marco_central" class="main-frame"></iframe>
+    <nav class="sidebar" aria-label="Navegación principal">
+      <img class="sidebar-logo" src="index/logo.gif" alt="Engraved" width="144" height="89">
+      <ul>
+        <li>
+          <a href="marco_central.html" target="marco_central">
+            <img src="index/boton_prin.jpg" alt="Inicio" width="120" height="20">
+          </a>
+        </li>
+        <li>
+          <a href="fotos/foto1.html" target="marco_central">
+            <img src="index/boton_fotos.jpg" alt="Fotos" width="120" height="20">
+          </a>
+        </li>
+        <li>
+          <a href="discografia/cds.html" target="marco_central">
+            <img src="index/boton_cds.jpg" alt="Discografía" width="120" height="20">
+          </a>
+        </li>
+        <li>
+          <a href="proyectos/proyectos.html" target="marco_central">
+            <img src="index/boton_proyecto.jpg" alt="Proyectos" width="120" height="20">
+          </a>
+        </li>
+        <li>
+          <a href="descargas/descargas.html" target="marco_central">
+            <img src="index/boton_descargas.jpg" alt="Descargas" width="120" height="20">
+          </a>
+        </li>
+        <li>
+          <a href="http://www.a-free-guestbook.com/guestbook.php?username=engraved" target="marco_central">
+            <img src="index/boton_guest.jpg" alt="Libro de visitas" width="120" height="20">
+          </a>
+        </li>
+        <li>
+          <a href="http://123polls.com/take_poll.php?poll_id=1099023929wald" target="marco_central">
+            <img src="index/boton_votacion.jpg" alt="Votación" width="120" height="20">
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <iframe src="marco_central.html" name="marco_central" title="Contenido de Engraved" class="main-frame"></iframe>
   </body>
 </html>
